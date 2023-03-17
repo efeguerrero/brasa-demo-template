@@ -1,0 +1,25 @@
+.btn {
+  position: fixed;
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+  bottom: 2rem;
+  right: 0.5rem;
+  background-color: rgba(79, 70, 229, 0.8);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(79, 70, 229, 1);
+}
+
+.arrowIcon {
+  width: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .arrowIcon {
+    width: 2rem;
+  }
+}

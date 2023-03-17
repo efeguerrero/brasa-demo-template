@@ -1,0 +1,48 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.sectionWrapper {
+  width: 100%;
+  padding: 6rem 1.25rem;
+  margin: 0 auto;
+}
+
+.footerWrapper,
+.headerWrapper {
+  width: 100%;
+  padding: 2rem 1.25rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 640px) {
+  .sectionWrapper,
+  .footerWrapper,
+  .headerWrapper {
+    max-width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sectionWrapper,
+  .footerWrapper,
+  .headerWrapper {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sectionWrapper,
+  .footerWrapper,
+  .headerWrapper {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .sectionWrapper,
+  .footerWrapper,
+  .headerWrapper {
+    max-width: 1536px;
+  }
+}

@@ -1,0 +1,61 @@
+.link {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  width: max-content;
+  padding: 0 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/*Animation for a background that fills from left to right*/
+
+.link:hover {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  content: '';
+  background: rgb(79, 70, 229);
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover:after {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+/*Underline Animation from left to right*/
+
+@media screen and (min-width: 768px) {
+  .link:hover {
+    color: black;
+  }
+
+  .link:after {
+    position: absolute;
+    top: auto;
+    bottom: -0.3rem;
+    left: auto;
+    right: 0;
+    height: 2px;
+    width: 0;
+    z-index: 1;
+    content: '';
+    background: rgb(79, 70, 229);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .link:hover:after {
+    width: 100%;
+    right: auto;
+    left: 0;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+}

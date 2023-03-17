@@ -1,0 +1,36 @@
+.menuIcon {
+  width: 2rem;
+  z-index: 10;
+}
+
+/*3 lines created and then animated - Set Color, height, radius,etc*/
+
+.menuIcon:before,
+.menuIcon:after,
+.menuIcon div {
+  background: rgb(79, 70, 229);
+  content: '';
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  margin: 7px 0 7px 0;
+  transition: 0.5s;
+}
+
+/*Two lines rotate and one dissapears when adding this classes*/
+
+.menuIconActive:before {
+  transform: translateY(10px) rotate(45deg);
+}
+.menuIconActive:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.menuIconActive div {
+  transform: scale(0);
+}
+
+@media screen and (min-width: 768px) {
+  .menuIcon {
+    display: none;
+  }
+}
