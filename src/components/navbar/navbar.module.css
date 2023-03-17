@@ -1,0 +1,54 @@
+.navContainer {
+  display: flex;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navIcons {
+  display: flex;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.navLogo {
+  width: auto;
+  height: 2.5rem;
+}
+
+.drawer {
+  display: flex;
+  position: fixed;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 10rem;
+  margin-left: auto;
+  background-color: #ffffff;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: column;
+  width: 66.666667%;
+  height: 100vh;
+  left: 100%;
+}
+
+.drawerActive {
+  transform: translateX(-100%);
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.socialsContainer {
+  margin-top: 2rem;
+  width: max-content;
+}
