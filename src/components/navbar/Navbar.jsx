@@ -2,7 +2,7 @@ import { React, useRef, useState } from 'react';
 import MenuIcon from './menuIcon/MenuIcon';
 
 //Logo url in public and alt text
-const logo = '/assets/navbar/logo.svg';
+const logo = '/assets/icons/logo.svg';
 const logoAlt = 'Website Logo';
 
 //Component Imports
@@ -27,7 +27,9 @@ const Sidebar = () => {
   return (
     <nav className={styles.navContainer}>
       <div className={styles.navIcons}>
-        <img src={logo} alt={logoAlt} className={styles.navLogo} />
+        <a href="/">
+          <img src={logo} alt={logoAlt} className={styles.navLogo} />
+        </a>
         <div className={styles.linksContainerDesktop}>
           {links.map((link) => {
             return <Link url={link.url} linkName={link.name} />;
