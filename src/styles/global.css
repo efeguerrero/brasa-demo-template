@@ -1,5 +1,11 @@
 * {
   scroll-behavior: smooth;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
 }
 
 .noScroll {

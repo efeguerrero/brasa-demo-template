@@ -1,0 +1,10 @@
+/* Project Colors*/
+
+:root {
+  --baseWhite: #fff;
+  --baseBlack: #000;
+  --textTitles: #000;
+  --textParagraph: #4b5563;
+  --highlight: #4f46e5;
+  /* --secondaryHighlight:222222; */
+}
