@@ -1,6 +1,10 @@
 .menuIcon {
   width: 2rem;
-  z-index: 10;
+  z-index: 5;
+}
+
+.menuIcon:hover {
+  cursor: pointer;
 }
 
 /*3 lines created and then animated - Set Color, height, radius,etc*/

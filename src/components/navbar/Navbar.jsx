@@ -18,14 +18,17 @@ import styles from './navbar.module.css';
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const refDrawer = useRef(null);
+  const refGrayCanva = useRef(null);
   const menuToggle = () => {
     refDrawer.current.classList.toggle(`${styles.drawerActive}`);
     setIsOpen((prev) => !prev);
     document.body.classList.toggle('noScroll');
+    refGrayCanva.current.classList.toggle(`${styles.grayCanvaActive}`);
   };
 
   return (
     <nav className={styles.navContainer}>
+      <div ref={refGrayCanva} class={styles.grayCanva}></div>
       <div className={styles.navIcons}>
         <a href="/">
           <img src={logo} alt={logoAlt} className={styles.navLogo} />
