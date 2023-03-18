@@ -21,7 +21,7 @@ const Sidebar = () => {
   const menuToggle = () => {
     refDrawer.current.classList.toggle(`${styles.drawerActive}`);
     setIsOpen((prev) => !prev);
-    // document.body.classList.toggle('no-scroll');
+    document.body.classList.toggle('noScroll');
   };
 
   return (
