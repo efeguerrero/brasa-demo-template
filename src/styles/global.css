@@ -15,7 +15,7 @@ body {
   overflow-y: hidden;
 }
 
-/*Global Style for all page sections to declare maximum width in every viewport size and center with margin auto*/
+/*Global Style for all page sections to declare maximum width in every viewport size and center with margin auto and some padding. Used was a wrapper for whole web. Can be avoided by using divs in Layout.astro with bodyWrapper class and leaving desired elements outside of it. This way I can for example have a section with a background in anoterh color or a picture that occuipes the whole screen width.*/
 .bodyWrapper {
   width: 100%;
   margin: 0 auto;
