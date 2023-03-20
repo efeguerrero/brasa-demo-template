@@ -15,27 +15,32 @@ body {
   overflow-y: hidden;
 }
 
+/*Global Style for all page sections to declare maximum width in every viewport size and center with margin auto*/
+.bodyWrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/*Padding and general settings for each type of section in page*/
+
+/*Sections are general page content sections*/
 .sectionWrapper {
-  width: 100%;
-  padding: 6rem 2rem;
-  margin: 0 auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
-.footerWrapper,
-.headerWrapper {
-  width: 100%;
-  padding: 2rem 1.25rem;
-  margin: 0 auto;
+.footerWrapper {
+  min-height: 10vh;
 }
 
 .headerWrapper {
-  padding: 0rem 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media screen and (min-width: 640px) {
-  .sectionWrapper,
-  .footerWrapper,
-  .headerWrapper {
+  .bodyWrapper {
     max-width: 640px;
   }
 
@@ -45,25 +50,19 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .sectionWrapper,
-  .footerWrapper,
-  .headerWrapper {
+  .bodyWrapper {
     max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .sectionWrapper,
-  .footerWrapper,
-  .headerWrapper {
+  .bodyWrapper {
     max-width: 1024px;
   }
 }
 
 @media screen and (min-width: 1536px) {
-  .sectionWrapper,
-  .footerWrapper,
-  .headerWrapper {
+  .bodyWrapper {
     max-width: 1536px;
   }
 }

@@ -1,7 +1,7 @@
 ---
 ---
 
-<section class="sectionWrapper heroWrapper">
+<section class="heroWrapper">
   <div class="heroContainer">
     <div class="heroInfoContainer">
       <h1 class="heroTitle">
@@ -38,13 +38,9 @@
 
   /*Overwrite sectionWrapper padding-top for Hero*/
   .heroWrapper {
-    /*Override gobal padding from sectionWrapper*/
-    padding: 0;
-    padding-top: 3rem;
-    width: 100%;
-    margin: 0 auto;
     /*15vh is the navbar fixed height in navbar.module.css*/
-    height: 85vh;
+    min-height: 85vh;
+    padding-top: 3rem;
   }
 
   .heroContainer {
