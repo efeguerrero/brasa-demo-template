@@ -34,10 +34,10 @@ body {
   min-height: 10vh;
 }
 
-.headerWrapper {
+/* .headerWrapper {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
+} */
 
 @media screen and (min-width: 640px) {
   .bodyWrapper {
