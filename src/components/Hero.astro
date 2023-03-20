@@ -5,29 +5,26 @@
   <div class="heroContainer">
     <div class="heroInfoContainer">
       <h1 class="heroTitle">
-        Before they sold out readymade <br class="hidden lg:inline-block" />
+        Before they sold out<br class="hidden lg:inline-block" />
         <span class="heroTitleStrong">readymade gluten</span>
       </h1>
-      <p class="mb-8 leading-relaxed text-left">
+      <p class="heroText">
         Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
         plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk
         tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard
         chambray.
       </p>
-      <div class="flex justify-center">
-        <a href="#contact"
-          ><button
-            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-            >Contact us!</button
-          ></a
-        >
-      </div>
+      <a href="#contact"
+        ><button class="stdButton heroButton">Contact us!</button></a
+      >
     </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+    <div class="imgContainer">
       <img
-        class="object-cover object-center rounded"
+        class="img"
+        width="720"
+        height="600"
         alt="hero"
-        src="https://dummyimage.com/720x600"
+        src="https://images.unsplash.com/photo-1679214523091-a9f9697ed10c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80&h=600"
       />
     </div>
   </div>
@@ -54,8 +51,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 4rem;
-    text-align: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .heroTitle {
@@ -65,11 +61,34 @@
     line-height: 2.5rem;
     font-weight: 800;
     letter-spacing: 2px;
-    text-align: left;
   }
 
   .heroTitleStrong {
     color: var(--highlight);
+  }
+
+  .heroText {
+    margin-bottom: 2rem;
+    line-height: 1.625;
+  }
+
+  /*Basic style for Btns comes from global sheet. Only set color for background, font and hover*/
+
+  .heroButton {
+    background-color: var(--highlight);
+    color: var(--baseWhite);
+  }
+
+  .imgContainer {
+    width: 100%;
+    /* width: 100vw;
+    overflow-x: hidden; */
+  }
+
+  .img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.25rem;
   }
 
   /*Media Queries*/
@@ -95,11 +114,20 @@
       font-size: 3rem;
       line-height: 3.5rem;
     }
+
+    .imgContainer {
+      width: 50%;
+    }
   }
   @media (min-width: 1024px) {
     .heroInfoContainer {
       padding-right: 6rem;
       flex-grow: 1;
+    }
+
+    .imgContainer {
+      width: 100%;
+      max-width: 32rem;
     }
   }
 </style>
