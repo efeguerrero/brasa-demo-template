@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
 * {
   scroll-behavior: smooth;
   cursor: default;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -26,7 +29,7 @@ body {
 }
 
 .headerWrapper {
-  padding: 2rem 3rem;
+  padding: 0rem 3rem;
 }
 
 @media screen and (min-width: 640px) {

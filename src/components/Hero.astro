@@ -1,16 +1,12 @@
 ---
 ---
 
-<section class="sectionWrapper">
+<section class="sectionWrapper heroWrapper">
   <div class="heroContainer">
-    <div
-      class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
-    >
-      <h1
-        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
-      >
-        Before they sold out
-        <br class="hidden lg:inline-block" />readymade gluten
+    <div class="heroInfoContainer">
+      <h1 class="heroTitle">
+        Before they sold out readymade <br class="hidden lg:inline-block" />
+        <span class="heroTitleStrong">readymade gluten</span>
       </h1>
       <p class="mb-8 leading-relaxed">
         Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
@@ -40,16 +36,75 @@
 <style>
   @import '../styles/variables.css';
 
+  /*Overwrite sectionWrapper padding-top for Hero*/
+  .heroWrapper {
+    /*Override gobal padding from sectionWrapper*/
+    padding: 0;
+    padding-top: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    /*15vh is the navbar fixed height in navbar.module.css*/
+    height: 85vh;
+  }
+
   .heroContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+
+  .heroInfoContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .heroTitle {
+    margin-bottom: 1rem;
+    color: var(--textTitle);
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .heroTitleStrong {
+    color: var(--highlight);
   }
 
   /*Media Queries*/
+
   @media (min-width: 768px) {
+    .heroWrapper {
+      padding-top: 6rem;
+    }
+
     .heroContainer {
       flex-direction: row;
     }
+
+    .heroInfoContainer {
+      padding-right: 4rem;
+      margin-bottom: 0;
+      text-align: left;
+      align-items: flex-start;
+      width: 50%;
+    }
+
+    .heroTitle {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .heroInfoContainer {
+      padding-right: 6rem;
+      flex-grow: 1;
+    }
   }
 </style>
+
+<!-- title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 -->
