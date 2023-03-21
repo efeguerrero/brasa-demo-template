@@ -1,3 +1,5 @@
+@import './variables.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
@@ -9,6 +11,25 @@
 
 body {
   background-color: white;
+  scrollbar-width: 8px;
+  scrollbar-base-color: transparent;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  /* display: none; Remove scrollbar for Chrome, Safari, and Opera */
+  width: 8px;
+  background: #dcdafa;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar:hover {
+  background: #9590ef;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--highlight);
+  border-radius: 10px;
 }
 
 .noScroll {
