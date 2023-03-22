@@ -25,14 +25,19 @@ const heroImg = '/assets/images/heroImage.svg';
   </div>
 </section>
 
-<style>
-  @import '../styles/variables.css';
+<style lang="scss">
+  @use '../styles/colors.scss';
+  @use '../styles/breakpoints.scss';
 
   /*Overwrite sectionWrapper padding-top for Hero*/
   .heroWrapper {
     /*15vh is the navbar fixed height in navbar.module.css*/
     min-height: 85vh;
     padding-top: 3rem;
+
+    @include breakpoints.size(tablet) {
+      padding-top: 6rem;
+    }
   }
 
   .heroContainer {
@@ -40,6 +45,10 @@ const heroImg = '/assets/images/heroImage.svg';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include breakpoints.size(tablet) {
+      flex-direction: row;
+    }
   }
 
   .heroInfoContainer {
@@ -47,19 +56,37 @@ const heroImg = '/assets/images/heroImage.svg';
     flex-direction: column;
     margin-bottom: 4rem;
     align-items: flex-start;
+
+    @include breakpoints.size(tablet) {
+      padding-right: 4rem;
+      margin-bottom: 0;
+      text-align: left;
+      align-items: flex-start;
+      width: 50%;
+    }
+
+    @include breakpoints.size(desktop) {
+      padding-right: 6rem;
+      flex-grow: 1;
+    }
   }
 
   .heroTitle {
     margin-bottom: 1rem;
-    color: var(--textTitle);
+    color: colors.$textTitle;
     font-size: 2.5rem;
     line-height: 2.5rem;
     font-weight: 800;
     letter-spacing: 2px;
+
+    @include breakpoints.size(tablet) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
   }
 
   .heroTitleStrong {
-    color: var(--highlight);
+    color: colors.$highlight;
   }
 
   .heroText {
@@ -70,13 +97,21 @@ const heroImg = '/assets/images/heroImage.svg';
   /*Basic style for Btns comes from global sheet. Only set color for background, font and hover*/
 
   .heroButton {
-    background-color: var(--highlight);
-    color: var(--baseWhite);
+    background-color: colors.$highlight;
+    color: colors.$baseWhite;
   }
 
   .imgContainer {
     width: 83%;
     /* width: 100vw; */
+    @include breakpoints.size(tablet) {
+      width: 50%;
+    }
+
+    @include breakpoints.size(tablet) {
+      width: 100%;
+      max-width: 42rem;
+    }
   }
 
   .img {
@@ -84,46 +119,4 @@ const heroImg = '/assets/images/heroImage.svg';
     object-position: center;
     /* border-radius: 0.25rem; */
   }
-
-  /*Media Queries*/
-
-  @media (min-width: 768px) {
-    .heroWrapper {
-      padding-top: 6rem;
-    }
-
-    .heroContainer {
-      flex-direction: row;
-    }
-
-    .heroInfoContainer {
-      padding-right: 4rem;
-      margin-bottom: 0;
-      text-align: left;
-      align-items: flex-start;
-      width: 50%;
-    }
-
-    .heroTitle {
-      font-size: 3rem;
-      line-height: 3.5rem;
-    }
-
-    .imgContainer {
-      width: 50%;
-    }
-  }
-  @media (min-width: 1024px) {
-    .heroInfoContainer {
-      padding-right: 6rem;
-      flex-grow: 1;
-    }
-
-    .imgContainer {
-      width: 100%;
-      max-width: 42rem;
-    }
-  }
 </style>
-
-<!-- title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 -->

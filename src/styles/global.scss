@@ -1,4 +1,5 @@
-@import './variables.css';
+@use './colors.scss';
+@use './breakpoints.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
@@ -28,7 +29,7 @@ body::-webkit-scrollbar:hover {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--highlight);
+  background: colors.$highlight;
   border-radius: 10px;
 }
 
@@ -37,32 +38,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*Global Style for all page sections to declare maximum width in every viewport size and center with margin auto and some padding. Used was a wrapper for whole web. Can be avoided by using divs in Layout.astro with bodyWrapper class and leaving desired elements outside of it. This way I can for example have a section with a background in anoterh color or a picture that occuipes the whole screen width.*/
+
 .bodyWrapper {
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
   overflow-x: hidden;
-}
 
-/*Padding and general settings for each type of section in page*/
-
-/*Sections are general page content sections*/
-
-/*****************/
-/*SECTION STYLE**/
-/***************/
-.sectionTitle {
-  color: var(--highlight);
-  font-size: 2.2rem;
-  /* line-height: 2rem; */
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.sectionWrapper {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  @include breakpoints.size(phoneL) {
+    max-width: 640px;
+  }
+  @include breakpoints.size(tablet) {
+    max-width: 768px;
+  }
+  @include breakpoints.size(laptop) {
+    max-width: 1024px;
+  }
+  @include breakpoints.size(desktop) {
+    max-width: 1536px;
+  }
 }
 
 .footerWrapper {
@@ -73,8 +67,6 @@ body::-webkit-scrollbar-thumb {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 } */
-
-/*****************/
 
 /*****************/
 /*BUTTON STYLING*/
@@ -97,36 +89,3 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*****************/
-
-@media screen and (min-width: 640px) {
-  .bodyWrapper {
-    max-width: 640px;
-  }
-
-  .sectionWrapper {
-    padding: 6rem 1.25rem;
-  }
-
-  .sectionTitle {
-    font-size: 2.5rem;
-    /* line-height: 2.25rem; */
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .bodyWrapper {
-    max-width: 768px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .bodyWrapper {
-    max-width: 1024px;
-  }
-}
-
-@media screen and (min-width: 1536px) {
-  .bodyWrapper {
-    max-width: 1536px;
-  }
-}

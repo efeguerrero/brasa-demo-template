@@ -1,9 +1,9 @@
 ---
 ---
 
-<section class="sectionWrapper">
-  <div class="" id="features">
-    <h1 class="sectionTitle">Features</h1>
+<section>
+  <div id="features">
+    <h2 class="sectionTitle">Features</h2>
     <div class="featuresContainer">
       <div class="feature">
         <div class="featureIconContainer">
@@ -81,25 +81,48 @@
   </div>
 </section>
 
-<style>
-  @import '../styles/variables.css';
+<style lang="scss">
+  @use '../styles/colors.scss';
+  @use '../styles/breakpoints.scss';
+  @use '../styles/section.scss';
+
+  section {
+    @include section.sectionWrapper;
+  }
+
+  .sectionTitle {
+    @include section.sectionTitle;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
 
   .featuresContainer {
     display: flex;
-
     flex-wrap: wrap;
+
+    @include breakpoints.size(phoneL) {
+      margin: -1rem;
+    }
+
+    @include breakpoints.size(tablet) {
+      margin-top: 0;
+    }
   }
 
   .feature {
     display: flex;
     padding: 1rem;
+
+    @include breakpoints.size(tablet) {
+      width: 33.333333%;
+    }
   }
 
   .featureIconContainer {
     display: inline-flex;
     margin-bottom: 1rem;
     background-color: #e0e7ff;
-    color: var(--highlight);
+    color: colors.$highlight;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
@@ -120,7 +143,7 @@
 
   .featureTitle {
     margin-bottom: 0.5rem;
-    color: var(--baseBlack);
+    color: colors.$baseBlack;
     font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: 500;
@@ -130,20 +153,6 @@
     font-size: 1rem;
     line-height: 1.5rem;
     line-height: 1.625;
-  }
-
-  @media (min-width: 640px) {
-    .featuresContainer {
-      margin: -1rem;
-    }
-  }
-  @media (min-width: 768px) {
-    .featuresContainer {
-      margin-top: 0;
-    }
-
-    .feature {
-      width: 33.333333%;
-    }
+    color: colors.$textParagraph;
   }
 </style>
