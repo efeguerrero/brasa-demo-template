@@ -5,7 +5,7 @@
 /*SECTION STYLE**/
 /***************/
 
-@mixin sectionWrapper {
+@mixin wrapper {
   padding-top: 6rem;
   padding-bottom: 6rem;
 
@@ -14,7 +14,7 @@
   }
 }
 
-@mixin sectionTitle {
+@mixin title {
   color: colors.$highlight;
   font-size: 2.2rem;
   font-weight: 700;
