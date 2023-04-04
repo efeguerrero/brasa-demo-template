@@ -1,4 +1,4 @@
-//This component will loop through pricingData array of objects and create a Plan component for each object. The Plan component will receive the price, name of each plan and features as props. The Plan component is in the same folder as this component. It will have a button to toggle a monthly or annually option which will determine which price is passed on as prop
+//Use this component for static pricing plans or dynamic ones where there is a discount between monthly or yearly prices. In case prices ar static, dont render the toggle button and avoid loading ANY JS.
 
 import React, { useState } from 'react';
 
@@ -10,7 +10,7 @@ import ToggleBtn from './ToggleBtn.jsx';
 import pricingData from './pricingData.js';
 
 //styles import
-import styles from './pricingDynamic.module.scss';
+import styles from './pricing.module.scss';
 
 const PricingDynamic = () => {
   const [planPayment, setPlanPayment] = useState('monthly');
@@ -33,6 +33,7 @@ const PricingDynamic = () => {
         <p className={styles.headerText}>
           Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
         </p>
+        {/* Use this toggle button to handle dynamic pricing between monthly or yearly plans. If price is static comment it out and dont render it */}
         <ToggleBtn handlePlan={handlePlan} planPayment={planPayment} />
       </div>
       <div className="mt-12">
@@ -48,6 +49,7 @@ const PricingDynamic = () => {
                 name={plan.name}
                 features={plan.features}
                 popular={plan.popular}
+                planPayment={planPayment}
               />
             );
           })}

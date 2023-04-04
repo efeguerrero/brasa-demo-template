@@ -5,7 +5,7 @@ import React from 'react';
 //Style Import
 import styles from './plan.module.scss';
 
-const Plan = ({ price, name, features, popular }) => {
+const Plan = ({ price, name, features, popular, planPayment }) => {
   return (
     <div className={styles.plan}>
       <div
@@ -15,11 +15,14 @@ const Plan = ({ price, name, features, popular }) => {
             : styles.planCenter
         }
       >
-        {popular ? <span class={styles.popularTag}>POPULAR</span> : null}
+        {popular ? <span className={styles.popularTag}>POPULAR</span> : null}
         <h3 className={styles.name}>{name}</h3>
         <p className={styles.price}>
           {price}
-          <span className={styles.paymentTag}>/mo</span>
+          <span className={styles.paymentTag}>
+            {' '}
+            {planPayment === 'annually' ? '/yr' : '/mo'}
+          </span>
         </p>
         <ul className={styles.featuresContainer}>
           {features.map((feature) => {
@@ -31,7 +34,7 @@ const Plan = ({ price, name, features, popular }) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2.5"
+                    strokeWidth="2.5"
                     className={styles.icon}
                     viewBox="0 0 24 24"
                   >

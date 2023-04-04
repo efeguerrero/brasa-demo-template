@@ -6,8 +6,31 @@ import styles from './toggleBtn.module.scss';
 const ToggleBtn = ({ handlePlan, planPayment }) => {
   return (
     <div onClick={() => handlePlan()} className={styles.headerBtnContainer}>
-      <button className={styles.headerBtn}>Monthly</button>
-      <button className={styles.headerBtn}>Annually</button>
+      <div
+        className={
+          planPayment === 'monthly'
+            ? styles.sliderMonthly
+            : styles.sliderAnnually
+        }
+      ></div>
+      <button
+        className={
+          planPayment === 'monthly'
+            ? `${styles.headerBtn} ${styles.headerBtnActive}`
+            : styles.headerBtn
+        }
+      >
+        Monthly
+      </button>
+      <button
+        className={
+          planPayment === 'annually'
+            ? `${styles.headerBtn} ${styles.headerBtnActive}`
+            : styles.headerBtn
+        }
+      >
+        Annually
+      </button>
     </div>
   );
 };

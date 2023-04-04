@@ -5,16 +5,14 @@ import Features from '../components/Features.astro';
 import Team from '../components/Team.astro';
 import Contact from '../components/Contact.astro';
 import Testimonials from '../components/Testimonials.astro';
-import Pricing from '../components/Pricing.astro';
-import PricingDynamic from '../components/pricing/PricingDynamic.jsx';
+import Pricing from '../components/pricing/Pricing.jsx';
 ---
 
 <Layout title="Brasa Demo Template">
   <main>
     <Hero />
     <Features />
-    <PricingDynamic client:load />
-    <Pricing />
+    <Pricing client:load />
     <Testimonials />
     <Team />
     <Contact />
