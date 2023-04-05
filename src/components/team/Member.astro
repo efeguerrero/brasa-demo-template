@@ -1,0 +1,74 @@
+---
+const { name, role, description, img, socials } = Astro.props;
+import MemberSocial from './MemberSocial.astro';
+---
+
+<div class="container">
+  <img alt="team member image" class="image" src={img} />
+  <div class="infoContainer">
+    <h2 class="name">{name}</h2>
+    <h3 class="role">{role}</h3>
+    <p class="description">
+      {description}
+    </p>
+    <span class="socialsContainer">
+      {socials.map((social) => <MemberSocial {...social} />)}
+    </span>
+  </div>
+</div>
+
+<style lang="scss">
+  @use '../../styles/colors.scss';
+  @use '../../styles/breakpoints.scss';
+
+  .container {
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    @include breakpoints.size(tablet) {
+      width: 50%;
+    }
+
+    @include breakpoints.size(laptop) {
+      width: 25%;
+    }
+  }
+
+  .image {
+    width: 19rem;
+    height: 19rem;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1rem;
+    height: 14rem;
+    border-radius: 0.5rem;
+  }
+
+  .infoContainer {
+    width: 100%;
+  }
+
+  .name {
+    color: colors.$textTitle;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+
+  .role {
+    color: colors.$textParagraph;
+    margin-bottom: 0.75rem;
+  }
+
+  .description {
+    margin-bottom: 1rem;
+  }
+
+  .socialsContainer {
+    display: inline-flex;
+  }
+</style>

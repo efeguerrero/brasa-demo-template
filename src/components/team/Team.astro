@@ -1,0 +1,62 @@
+---
+import Member from './Member.astro';
+
+//JSON file are automatically parsed to JS objects/arrays
+import team from './team.json';
+---
+
+<section>
+  <div class="" id="team">
+    <div class="headerContainer">
+      <h1 class="headerTitle">Our Team</h1>
+      <p class="headerText">
+        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+        gentrify, subway tile poke farm-to-table. Franzen you probably haven't
+        heard of them.
+      </p>
+    </div>
+    <div class="membersContainer">
+      {team.map((member) => <Member {...member} />)}
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @use '../../styles/colors.scss';
+  @use '../../styles/breakpoints.scss';
+  @use '../../styles/section.scss';
+
+  section {
+    @include section.wrapper;
+  }
+
+  .headerContainer {
+    display: flex;
+    margin-bottom: 5rem;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .headerTitle {
+    @include section.title;
+  }
+
+  .headerText {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    line-height: 1.625;
+
+    @include breakpoints.size(laptop) {
+      width: 66.666667%;
+    }
+  }
+
+  .membersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
