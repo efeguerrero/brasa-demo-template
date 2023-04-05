@@ -26,7 +26,7 @@ const { name, url } = Astro.props;
     class="icon"
     viewBox="0 0 24 24"
   >
-    <path d={icons[name].path}></path>
+    <path class="icon" d={icons[name].path}></path>
   </svg>
 </a>
 
@@ -39,9 +39,9 @@ const { name, url } = Astro.props;
   }
 
   .icon {
+    cursor: pointer;
     margin: 0 0.2rem;
     width: 1.5rem;
     height: 1.5rem;
-    cursor: pointer;
   }
 </style>
