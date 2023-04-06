@@ -9,7 +9,7 @@ const MenuIcon = ({ menuToggle, isOpen }) => {
     : styles.menuIcon;
 
   return (
-    <div class={classes} ref={menuIcon} onClick={() => menuToggle()}>
+    <div className={classes} ref={menuIcon} onClick={() => menuToggle()}>
       <div></div>
     </div>
   );

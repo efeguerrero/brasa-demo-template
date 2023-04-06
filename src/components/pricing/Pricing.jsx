@@ -15,16 +15,12 @@ import styles from './pricing.module.scss';
 const PricingDynamic = () => {
   const [planPayment, setPlanPayment] = useState('monthly');
 
-  console.log(planPayment);
-
   const handlePlan = () => {
     if (planPayment === 'monthly') {
       setPlanPayment('annually');
     } else {
       setPlanPayment('monthly');
     }
-
-    console.log(planPayment);
   };
   return (
     <section className={styles.section}>
@@ -38,7 +34,7 @@ const PricingDynamic = () => {
       </div>
       <div className="mt-12">
         <div className="max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {pricingData.map((plan) => {
+          {pricingData.map((plan, index) => {
             const planPrice =
               planPayment === 'monthly'
                 ? plan.price.monthly
@@ -50,6 +46,7 @@ const PricingDynamic = () => {
                 features={plan.features}
                 popular={plan.popular}
                 planPayment={planPayment}
+                key={index}
               />
             );
           })}

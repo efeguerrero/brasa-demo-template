@@ -8,7 +8,7 @@ import Client from './Client.astro';
     <div class="sectionLayout">
       <div class="headerContainer">
         <h2 class="headerTitle">Testimonials</h2>
-        <p>
+        <p class="headerText">
           Pri ex magna scaevola moderatius. Nullam accommodare no vix, est ei
           diceret alienum, et sit cetero malorum. Et sea iudico consequat, est
           sanctus adipisci ex.
@@ -60,9 +60,7 @@ import Client from './Client.astro';
   }
 
   .headerText {
-    color: colors.$textParagraph;
-    font-size: 1rem;
-    line-height: 1.625;
+    @include section.text;
   }
 
   .testimonialsContainer {

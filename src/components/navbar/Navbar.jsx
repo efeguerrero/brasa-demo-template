@@ -28,26 +28,27 @@ const Sidebar = () => {
 
   return (
     <nav className={styles.navContainer}>
-      <div ref={refGrayCanva} class={styles.grayCanva}></div>
+      <div ref={refGrayCanva} className={styles.grayCanva}></div>
       <div className={styles.navIcons}>
         <a href="/">
           <img src={logo} alt={logoAlt} className={styles.navLogo} />
         </a>
         <div className={styles.linksContainerDesktop}>
-          {links.map((link) => {
-            return <Link url={link.url} linkName={link.name} />;
+          {links.map((link, index) => {
+            return <Link url={link.url} linkName={link.name} key={index} />;
           })}
         </div>
         <MenuIcon menuToggle={menuToggle} isOpen={isOpen} />
       </div>
       <div ref={refDrawer} className={styles.drawer}>
         <div className={styles.linksContainerDrawer}>
-          {links.map((link) => {
+          {links.map((link, index) => {
             return (
               <Link
                 url={link.url}
                 linkName={link.name}
                 menuToggle={menuToggle}
+                key={index}
               />
             );
           })}

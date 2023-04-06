@@ -3,7 +3,7 @@ const { name, title, img, text } = Astro.props;
 ---
 
 <div class="client">
-  <p>
+  <p class="review">
     "{text}"
   </p>
   <div class="infoContainer">
@@ -24,6 +24,10 @@ const { name, title, img, text } = Astro.props;
     border-radius: 0.25rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .review {
+    color: colors.$textParagraph;
   }
 
   .infoContainer {

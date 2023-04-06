@@ -25,15 +25,15 @@ const Plan = ({ price, name, features, popular, planPayment }) => {
           </span>
         </p>
         <ul className={styles.featuresContainer}>
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             return (
-              <li className={styles.feature}>
+              <li className={styles.feature} key={index}>
                 <span className={styles.iconContainer}>
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     strokeWidth="2.5"
                     className={styles.icon}
                     viewBox="0 0 24 24"
@@ -55,9 +55,9 @@ const Plan = ({ price, name, features, popular, planPayment }) => {
           <svg
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             className="w-4 h-4 ml-auto"
             viewBox="0 0 24 24"
           >

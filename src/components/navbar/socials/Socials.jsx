@@ -8,16 +8,16 @@ const instagram = 'https://www.instagram.com/concretiodesarrollos/';
 const Socials = () => {
   return (
     // Icons from Remix Design
-    <div class="flex gap-4 ">
+    <div className="flex gap-4 ">
       {/* Instagram Link */}
       <a
         href={instagram}
         target="_blank"
-        class="mx-2 text-gray-500 transition-colors duration-300 hover:text-gray-800"
+        className="mx-2 text-gray-500 transition-colors duration-300 hover:text-gray-800"
         aria-label="Reddit"
       >
         <svg
-          class="w-7 h-7"
+          className="w-7 h-7"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,11 +32,11 @@ const Socials = () => {
       <a
         href={facebook}
         target="_blank"
-        class="mx-2 text-gray-500 transition-colors duration-300 hover:text-gray-800"
+        className="mx-2 text-gray-500 transition-colors duration-300 hover:text-gray-800"
         aria-label="Facebook"
       >
         <svg
-          class="w-7 h-7"
+          className="w-7 h-7"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,11 +51,11 @@ const Socials = () => {
       <a
         href={whatsapp}
         target="_blank"
-        class="mx-2 text-gray-500 transition-colors duration-300 hover:text-gray-800"
+        className="mx-2 text-gray-500 transition-colors duration-300 hover:text-gray-800"
         aria-label="Github"
       >
         <svg
-          class="w-7 h-7"
+          className="w-7 h-7"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
