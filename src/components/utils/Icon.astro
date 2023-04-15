@@ -1,0 +1,14 @@
+---
+//TS Support to define correctly variables
+export interface Props {
+  icon: string;
+  folder: string;
+}
+
+const { icon, folder } = Astro.props;
+const { default: innerHTML } = await import(
+  `/src/icons/${folder}/${icon}.svg?raw`
+);
+---
+
+<Fragment set:html={innerHTML} />

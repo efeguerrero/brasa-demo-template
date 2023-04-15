@@ -1,0 +1,66 @@
+---
+//Component Import
+import StatCard from './StatCard.astro';
+
+//Data Import
+import data from './stats.json';
+
+//name in JSON file should match .svg name in Icons folder
+---
+
+<section>
+  <div class="headingContainer">
+    <h1 class="sectionTitle">Master Cleanse Reliac Heirloom</h1>
+    <p class="headerText">
+      Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify,
+      subway tile poke farm-to-table. Franzen you probably haven't heard of them
+      man bun deep jianbing selfies heirloom prism food truck ugh squid celiac
+      humblebrag.
+    </p>
+  </div>
+  <div class="cardsContainer">
+    {data.map((data) => <StatCard name={data.name} stat={data.stat} />)}
+  </div>
+</section>
+
+<style lang="scss">
+  @use '../../styles/colors.scss';
+  @use '../../styles/breakpoints.scss';
+  @use '../../styles/section.scss';
+
+  section {
+    @include section.wrapper;
+  }
+
+  .headingContainer {
+    display: flex;
+    margin-bottom: 5rem;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sectionTitle {
+    @include section.title;
+  }
+
+  .headerText {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    line-height: 1.625;
+
+    @include breakpoints.size(laptop) {
+      width: 66.666667%;
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import Icon from '../utils/Icon.astro';
+
+const { name, stat } = Astro.props;
+---
+
+<div class="container">
+  <Icon folder="stats" icon={name} />
+  <h2 class="stat">{stat}</h2>
+  <p class="name">{name}</p>
+</div>
+
+<style lang="scss">
+  @use '../../styles/colors.scss';
+  @use '../../styles/breakpoints.scss';
+
+  .container {
+    margin: 1rem;
+    padding: 2rem 0;
+    width: 70%;
+    border-radius: 0.5rem;
+    border-width: 2px;
+    border-color: colors.$lightGray;
+
+    @include breakpoints.size(phoneL) {
+      width: calc(50% - 1rem * 2);
+    }
+
+    @include breakpoints.size(desktop) {
+      width: calc(25% - 1rem * 4);
+    }
+  }
+
+  .stat {
+    color: colors.$baseBlack;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+  }
+
+  .name {
+    line-height: 1.625;
+  }
+</style>

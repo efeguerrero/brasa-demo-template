@@ -10,6 +10,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+svg {
+  width: inherit;
+  height: inherit;
+}
+
+svg,
+path {
+  cursor: inherit;
+}
+
 body {
   background-color: white;
   scrollbar-width: 8px;
@@ -58,15 +68,6 @@ body::-webkit-scrollbar-thumb {
     max-width: 1536px;
   }
 }
-
-.footerWrapper {
-  min-height: 10vh;
-}
-
-/* .headerWrapper {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-} */
 
 /*****************/
 /*BUTTON STYLING*/

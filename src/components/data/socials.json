@@ -1,0 +1,19 @@
+[
+  {
+    "name": "facebook",
+    "url": "http://www.facebook.com"
+  },
+  {
+    "name": "twitter",
+    "url": "http://www.twitter.com"
+  },
+  {
+    "name": "linkedin",
+    "url": "http://www.linkedin.com"
+  },
+
+  {
+    "name": "instagram",
+    "url": "http://www.instagram.com"
+  }
+]
