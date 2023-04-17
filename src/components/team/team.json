@@ -16,6 +16,10 @@
       {
         "name": "instagram",
         "url": "https://www.instagram.com/"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/"
       }
     ]
   },
@@ -50,10 +54,6 @@
         "url": "https://www.facebook.com/"
       },
       {
-        "name": "twitter",
-        "url": "https://twitter.com/"
-      },
-      {
         "name": "instagram",
         "url": "https://www.instagram.com/"
       }
@@ -76,6 +76,10 @@
       {
         "name": "instagram",
         "url": "https://www.instagram.com/"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/"
       }
     ]
   }

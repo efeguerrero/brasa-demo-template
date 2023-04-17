@@ -11,6 +11,8 @@
 }
 
 svg {
+  //This min width is used as fallback to always render the Icon if the mistake of not declaring parent widht is done!
+  min-width: 1rem;
   width: inherit;
   height: inherit;
 }

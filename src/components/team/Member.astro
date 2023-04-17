@@ -2,10 +2,7 @@
 const { name, role, description, img, socials } = Astro.props;
 
 //Icon Component to import svg icons from a folder
-import Icon from '/src/components/utils/Icon.astro';
-
-//Socials data imported from a json file
-import socials from '/src/data/socials.json';
+import Icon from '../utils/Icon.astro';
 ---
 
 <div class="container">
@@ -96,5 +93,6 @@ import socials from '/src/data/socials.json';
   .socialLink {
     color: colors.$baseGray;
     cursor: pointer;
+    width: 1.5rem;
   }
 </style>
