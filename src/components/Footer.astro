@@ -3,12 +3,10 @@
 import Icon from './utils/Icon.astro';
 
 //Logo url in public and alt text
-const logo = '/assets/icons/logo.svg';
-const logoAlt = 'Website Logo';
 const company = 'Brasa Demo';
 
 //Socials data imported from a json file
-import socials from './data/socials.json';
+import socials from '/src/data/socials.json';
 ---
 
 <footer>
@@ -85,6 +83,7 @@ import socials from './data/socials.json';
   }
   .socialLink {
     color: colors.$baseGray;
+    cursor: pointer;
   }
 </style>
 

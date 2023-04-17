@@ -1,3 +1,6 @@
+@use '../../styles/colors.scss';
+@use '../../styles/breakpoints.scss';
+
 .navContainer {
   display: flex;
   flex-direction: column;
@@ -8,9 +11,7 @@
 .navIcons {
   display: flex;
   align-items: center;
-  /* padding-top: 1.5rem;
-  padding-bottom: 1.5rem; */
-  background-color: #ffffff;
+  background-color: colors.$baseWhite;
   justify-content: space-between;
 }
 
@@ -31,11 +32,17 @@
   padding-right: 5rem;
   padding-top: 10rem;
   margin-left: auto;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: colors.$baseWhite;
+  background-image: url('./assets/mobie_navbar_background.svg');
+  background-size: auto 100%;
   flex-direction: column;
   width: 66.6%;
   height: 100vh;
   z-index: 4;
+
+  @include breakpoints.size(tablet) {
+    display: none;
+  }
 }
 
 .drawerActive {
@@ -76,14 +83,8 @@
 
 .linksContainerDesktop {
   display: none;
-}
 
-@media screen and (min-width: 768px) {
-  .drawer {
-    display: none;
-  }
-
-  .linksContainerDesktop {
+  @include breakpoints.size(tablet) {
     display: flex;
     flex-direction: row;
     align-items: center;

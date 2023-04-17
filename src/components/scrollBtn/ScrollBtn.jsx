@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 //Styles Import
-import styles from './btn.module.css';
+import styles from './btn.module.scss';
 
 //Icon Import
 import arrowIcon from './arrow.svg';

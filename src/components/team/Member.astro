@@ -1,6 +1,11 @@
 ---
 const { name, role, description, img, socials } = Astro.props;
-import MemberSocial from './MemberSocial.astro';
+
+//Icon Component to import svg icons from a folder
+import Icon from '/src/components/utils/Icon.astro';
+
+//Socials data imported from a json file
+import socials from '/src/data/socials.json';
 ---
 
 <div class="container">
@@ -11,8 +16,16 @@ import MemberSocial from './MemberSocial.astro';
     <p class="description">
       {description}
     </p>
-    <span class="socialsContainer">
-      {socials.map((social) => <MemberSocial {...social} />)}
+    <span class="socialContainer">
+      {
+        socials.map((social) => {
+          return (
+            <a class="socialLink" target="_blank">
+              <Icon icon={social.name} folder="socials" />
+            </a>
+          );
+        })
+      }
     </span>
   </div>
 </div>
@@ -68,7 +81,20 @@ import MemberSocial from './MemberSocial.astro';
     margin-bottom: 1rem;
   }
 
-  .socialsContainer {
+  .socialContainer {
     display: inline-flex;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 0.7rem;
+
+    @include breakpoints.size(phoneL) {
+      margin-top: 0;
+      margin-left: auto;
+      justify-content: flex-start;
+    }
+  }
+  .socialLink {
+    color: colors.$baseGray;
+    cursor: pointer;
   }
 </style>

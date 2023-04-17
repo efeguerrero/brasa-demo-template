@@ -1,3 +1,6 @@
+@use '../../../styles/colors.scss';
+@use '../../../styles/breakpoints.scss';
+
 .link {
   position: relative;
   font-size: 1rem;
@@ -11,7 +14,7 @@
 /*Animation for a background that fills from left to right*/
 
 .link:hover {
-  color: white;
+  color: colors.$baseWhite;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -24,7 +27,7 @@
   width: 0;
   z-index: -1;
   content: '';
-  background: rgb(79, 70, 229);
+  background: colors.$highlight;
   transition: all 0.2s ease-in-out;
 }
 
@@ -55,7 +58,7 @@
     width: 0;
     z-index: 1;
     content: '';
-    background: rgb(79, 70, 229);
+    background: colors.$highlight;
     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   }
 

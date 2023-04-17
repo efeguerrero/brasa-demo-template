@@ -21,14 +21,14 @@ const links = [
     url: '#contact',
     name: 'Contacto',
   },
-  {
-    url: '/v2',
-    name: 'Version 2',
-  },
-  {
-    url: '/',
-    name: 'Version 1',
-  },
+  // {
+  //   url: '/v2',
+  //   name: 'Version 2',
+  // },
+  // {
+  //   url: '/',
+  //   name: 'Version 1',
+  // },
 ];
 
 export default links;

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "facebook",
+    "url": "http://www.facebook.com",
+    "icon": "/src/icons/socials/facebook.svg"
+  },
+  {
+    "name": "twitter",
+    "url": "http://www.twitter.com",
+    "icon": "/src/icons/socials/twitter.svg"
+  },
+  {
+    "name": "linkedin",
+    "url": "http://www.linkedin.com",
+    "icon": "/src/icons/socials/linkedin.svg"
+  },
+  {
+    "name": "instagram",
+    "url": "http://www.instagram.com",
+    "icon": "/src/icons/socials/instagram.svg"
+  }
+]

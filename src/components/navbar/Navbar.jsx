@@ -1,8 +1,9 @@
-import { React, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import MenuIcon from './menuIcon/MenuIcon';
 
 //Logo url in public and alt text
-const logo = '/assets/icons/logo.svg';
+
+import logo from '/src/icons/brand/logo.svg';
 const logoAlt = 'Website Logo';
 
 //Component Imports
@@ -13,7 +14,7 @@ import Socials from './socials/Socials';
 import links from './links';
 
 //Styles Import
-import styles from './navbar.module.css';
+import styles from './navbar.module.scss';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,0 +1,30 @@
+@use '../../../styles/colors.scss';
+@use '../../../styles/breakpoints.scss';
+
+.container {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 300ms;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon {
+  cursor: pointer;
+  //Converted from desired color in colors.scss to filter property via webpage (isotropic.co
+  filter: invert(37%) sepia(71%) saturate(6120%) hue-rotate(237deg)
+    brightness(95%) contrast(101%);
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    //Converted from desired color in colors.scss to filter property via webpage (isotropic.co
+    filter: invert(37%) sepia(71%) saturate(6120%) hue-rotate(237deg)
+      brightness(95%) contrast(101%);
+  }
+}

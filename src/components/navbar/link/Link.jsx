@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './link.module.css';
+import styles from './link.module.scss';
 
 const Link = ({ url, linkName, menuToggle }) => {
   return (
