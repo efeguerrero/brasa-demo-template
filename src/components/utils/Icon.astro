@@ -4,7 +4,6 @@ export interface Props {
   icon: string;
   folder: string;
 }
-
 const { icon, folder } = Astro.props;
 const { default: innerHTML } = await import(
   `../../icons/${folder}/${icon}.svg?raw`
