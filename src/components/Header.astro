@@ -2,6 +2,28 @@
 import Navbar from './navbar/Navbar';
 ---
 
-<header class="headerWrapper">
-  <Navbar client:idle />
+<header>
+  <div class="navBorder"></div>
+  <div class="bodyWrapper">
+    <Navbar client:idle />
+  </div>
 </header>
+
+<style lang="scss">
+  @use '../styles/colors.scss';
+  @use '../styles/breakpoints.scss';
+
+  header {
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .navBorder {
+    height: 0.35rem;
+    background: linear-gradient(
+      270deg,
+      rgba(233, 126, 45, 1) 0%,
+      rgba(233, 77, 47, 1) 70%
+    );
+  }
+</style>

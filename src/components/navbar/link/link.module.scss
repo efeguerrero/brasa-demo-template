@@ -3,51 +3,65 @@
 
 .link {
   position: relative;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.75rem;
-  width: max-content;
+  // line-height: 2.5rem;
+  width: 100%;
   padding: 0 0.5rem;
   transition: all 0.2s ease-in-out;
-}
-
-/*Animation for a background that fills from left to right*/
-
-.link:hover {
   color: colors.$baseWhite;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Din-Regular', sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(192, 208, 232, 0.2); //Medium gray with opacity 20%
+  padding-bottom: 1.2rem;
+
+  @include breakpoints.size(laptop) {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: colors.$blue;
+    border-bottom: none;
+    padding-bottom: 0;
+    width: max-content;
+  }
+
+  @include breakpoints.size(desktop) {
+    font-size: 1rem;
+  }
 }
 
-.link:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  z-index: -1;
-  content: '';
-  background: colors.$highlight;
-  transition: all 0.2s ease-in-out;
+.link:nth-last-child(1) {
+  border-bottom: none;
 }
 
-.link:hover:after {
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-}
+// /*Animation for a background that fills from left to right*/
+
+// .link:hover {
+//   color: colors.$baseWhite;
+//   transition: all 0.2s ease-in-out;
+//   cursor: pointer;
+// }
+
+// .link:after {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 0;
+//   z-index: -1;
+//   content: '';
+//   background: colors.$highlight;
+//   transition: all 0.2s ease-in-out;
+// }
+
+// .link:hover:after {
+//   width: 100%;
+//   transition: all 0.2s ease-in-out;
+// }
 
 /*Underline Animation from left to right*/
 
-@media screen and (min-width: 768px) {
-  .link {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .link:hover {
-    color: black;
-  }
-
+@media screen and (min-width: 1024px) {
   .link:after {
     position: absolute;
     top: auto;

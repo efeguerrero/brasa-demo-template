@@ -14,7 +14,7 @@
       @content;
     }
   } @else if $size == desktop {
-    @media (min-width: 1536px) {
+    @media (min-width: 1600px) {
       @content;
     }
   }

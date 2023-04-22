@@ -2,33 +2,21 @@
 
 const links = [
   {
-    url: '#pricing',
-    name: 'Precios',
+    url: '#whoweare',
+    name: 'who we are',
   },
   {
-    url: '#features',
-    name: 'Features',
+    url: '#whychooseus',
+    name: 'why choose us',
   },
   {
-    url: '#testimonials',
-    name: 'Testimonios',
-  },
-  {
-    url: '#team',
-    name: '¿Quienes Somos?',
+    url: '#products',
+    name: 'products',
   },
   {
     url: '#contact',
-    name: 'Contacto',
+    name: 'contact',
   },
-  // {
-  //   url: '/v2',
-  //   name: 'Version 2',
-  // },
-  // {
-  //   url: '/',
-  //   name: 'Version 1',
-  // },
 ];
 
 export default links;
