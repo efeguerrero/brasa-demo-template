@@ -3,28 +3,28 @@
 
 .container {
   display: flex;
-  gap: 2.5rem;
+  gap: 1rem;
+}
 
-  @include breakpoints.size(laptop) {
-    gap: 1.5rem;
-  }
-
-  @include breakpoints.size(desktop) {
-    gap: 2.5rem;
-  }
+.link {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 300ms;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .icon {
-  width: 2.3rem;
-  height: 2.3rem;
+  cursor: pointer;
+  //Converted from desired color in colors.scss to filter property via webpage (isotropic.co
+  filter: invert(37%) sepia(71%) saturate(6120%) hue-rotate(237deg)
+    brightness(95%) contrast(101%);
+  transition: all 0.3s ease-in;
 
-  @include breakpoints.size(laptop) {
-    width: 1.2rem;
-    height: 1.2rem;
-    cursor: pointer;
-  }
-  @include breakpoints.size(desktop) {
-    width: 1.5rem;
-    height: 1.5rem;
+  &:hover {
+    //Converted from desired color in colors.scss to filter property via webpage (isotropic.co
+    filter: invert(37%) sepia(71%) saturate(6120%) hue-rotate(237deg)
+      brightness(95%) contrast(101%);
   }
 }

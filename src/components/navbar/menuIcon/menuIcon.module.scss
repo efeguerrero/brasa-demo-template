@@ -2,10 +2,10 @@
 @use '../../../styles/breakpoints.scss';
 
 .menuIcon {
-  width: 1.8rem;
+  width: 2rem;
   z-index: 5;
 
-  @include breakpoints.size(laptop) {
+  @include breakpoints.size(tablet) {
     display: none;
   }
 }
@@ -19,11 +19,11 @@
 .menuIcon:before,
 .menuIcon:after,
 .menuIcon div {
-  background: colors.$blue;
+  background: colors.$highlight;
   content: '';
   display: block;
   height: 3px;
-  border-radius: 1px;
+  border-radius: 3px;
   margin: 7px 0 7px 0;
   transition: 0.5s;
 }
@@ -32,11 +32,9 @@
 
 .menuIconActive:before {
   transform: translateY(10px) rotate(45deg);
-  background: colors.$highlight;
 }
 .menuIconActive:after {
   transform: translateY(-10px) rotate(-45deg);
-  background: colors.$highlight;
 }
 .menuIconActive div {
   transform: scale(0);

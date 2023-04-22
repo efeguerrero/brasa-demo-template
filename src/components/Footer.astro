@@ -11,9 +11,7 @@ import socials from '../data/socials.json';
 
 <footer>
   <div class="footerWrapper">
-    <a href="#top" class="logo"
-      ><Icon folder="brand" variant="" icon="alpha_logo" /></a
-    >
+    <a href="#top" class="logo"><Icon folder="brand" icon="logo" /></a>
     <p class="text">
       © <span id="yearHolder"></span> - {company}
     </p>
@@ -22,7 +20,7 @@ import socials from '../data/socials.json';
         socials.map((social) => {
           return (
             <a class="socialLink" target="_blank">
-              <Icon icon={social.name} variant="_circle" folder="socials" />
+              <Icon icon={social.name} folder="socials" />
             </a>
           );
         })

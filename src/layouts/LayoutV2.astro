@@ -7,10 +7,6 @@ const { title } = Astro.props;
 
 //Component Import
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ScrollBtn from '../components/scrollBtn/ScrollBtn';
-
 //Global Styles Import
 import '../styles/global.scss';
 ---
@@ -24,10 +20,7 @@ import '../styles/global.scss';
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bodyWrapper">
-    <Header />
+  <body>
     <slot />
-    <Footer />
-    <ScrollBtn client:idle />
   </body>
 </html>

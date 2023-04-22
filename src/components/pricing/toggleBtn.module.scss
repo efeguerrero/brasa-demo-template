@@ -1,0 +1,45 @@
+@use '../../styles/colors.scss';
+@use '../../styles/breakpoints.scss';
+
+.headerBtnContainer {
+  display: flex;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: colors.$highlight;
+  position: relative;
+  background-color: transparent;
+}
+
+.headerBtn {
+  padding: 0.4rem 1rem;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  &Active {
+    color: colors.$baseWhite;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.sliderMonthly {
+  position: absolute;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: colors.$highlight;
+  filter: brightness(120%);
+  transition: all 0.3s ease-in-out;
+}
+
+.sliderAnnually {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: colors.$highlight;
+  filter: brightness(120%);
+  transition: all 0.3s ease-in-out;
+}

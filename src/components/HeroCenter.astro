@@ -3,7 +3,7 @@ const heroImg = '/assets/images/heroImage.svg';
 ---
 
 <section class="heroWrapper">
-  <div class="heroContainer">
+  <div class="heroContainer bodyWrapper">
     <div class="heroInfoContainer">
       <h1 class="heroTitle">
         Before they sold out<br class="hidden lg:inline-block" />
@@ -19,13 +19,10 @@ const heroImg = '/assets/images/heroImage.svg';
         ><button class="stdButton heroButton">Contact us!</button></a
       >
     </div>
-    <div class="imgContainer">
-      <img class="img" width="720" height="600" alt="hero" src={heroImg} />
-    </div>
   </div>
 </section>
 
-<style lang="scss">
+<style>
   @use '../styles/colors.scss';
   @use '../styles/breakpoints.scss';
 
@@ -34,10 +31,10 @@ const heroImg = '/assets/images/heroImage.svg';
     /*15vh is the navbar fixed height in navbar.module.css*/
     min-height: 85vh;
     padding-top: 3rem;
-
-    @include breakpoints.size(tablet) {
-      padding-top: 6rem;
-    }
+    background-image: url('/assets/images/heroBackground.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 12rem;
   }
 
   .heroContainer {
@@ -45,73 +42,45 @@ const heroImg = '/assets/images/heroImage.svg';
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    @include breakpoints.size(tablet) {
-      flex-direction: row;
-    }
   }
 
   .heroInfoContainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 4rem;
-    align-items: flex-start;
-
-    @include breakpoints.size(tablet) {
-      padding-right: 4rem;
-      margin-bottom: 0;
-      text-align: left;
-      align-items: flex-start;
-      width: 50%;
-    }
-
-    @include breakpoints.size(desktop) {
-      padding-right: 6rem;
-      flex-grow: 1;
-    }
+    align-items: center;
   }
 
   .heroTitle {
-    margin-bottom: 1rem;
-    color: colors.$textTitle;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--textTitle);
+    font-size: 3rem;
+    line-height: 3rem;
     font-weight: 800;
     letter-spacing: 2px;
-
-    @include breakpoints.size(tablet) {
-      font-size: 3rem;
-      line-height: 3.5rem;
-    }
   }
 
   .heroTitleStrong {
-    color: colors.$highlight;
+    color: var(--highlight);
   }
 
   .heroText {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     line-height: 1.625;
+    text-align: center;
   }
 
   /*Basic style for Btns comes from global sheet. Only set color for background, font and hover*/
 
   .heroButton {
-    background-color: colors.$highlight;
-    color: colors.$baseWhite;
+    background-color: var(--highlight);
+    color: var(--baseWhite);
   }
 
   .imgContainer {
     width: 83%;
     /* width: 100vw; */
-    @include breakpoints.size(tablet) {
-      width: 50%;
-    }
-
-    @include breakpoints.size(tablet) {
-      width: 100%;
-      max-width: 42rem;
-    }
   }
 
   .img {
@@ -119,4 +88,40 @@ const heroImg = '/assets/images/heroImage.svg';
     object-position: center;
     /* border-radius: 0.25rem; */
   }
+
+  /*Media Queries*/
+
+  @media (min-width: 768px) {
+    .heroWrapper {
+      padding-top: 6rem;
+      background-position: 0 -2rem;
+    }
+
+    .heroContainer {
+      flex-direction: row;
+    }
+
+    .heroInfoContainer {
+      margin-bottom: 0;
+      text-align: left;
+      align-items: center;
+      width: 50%;
+    }
+
+    .heroTitle {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+
+    .heroText {
+      font-size: 1.3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .heroInfoContainer {
+      padding-right: 6rem;
+    }
+  }
 </style>
+
+<!-- title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 -->
