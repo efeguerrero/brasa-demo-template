@@ -1,5 +1,7 @@
 import React from 'react';
 
+import icon from '/src/icons/socials/facebook.svg';
+
 //Socials import
 import data from '/src/data/socials.json';
 
@@ -17,7 +19,7 @@ const Socials = () => {
             target="_blank"
             className={style.link}
           >
-            <img src={social.icon} alt={social.name} className={style.icon} />
+            <img src={icon} alt={social.name} className={style.icon} />
           </a>
         );
       })}

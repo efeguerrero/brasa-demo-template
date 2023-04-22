@@ -1,22 +1,18 @@
 [
   {
     "name": "facebook",
-    "url": "http://www.facebook.com",
-    "icon": "/src/icons/socials/facebook.svg"
+    "url": "http://www.facebook.com"
   },
   {
     "name": "twitter",
-    "url": "http://www.twitter.com",
-    "icon": "/src/icons/socials/twitter.svg"
+    "url": "http://www.twitter.com"
   },
   {
     "name": "linkedin",
-    "url": "http://www.linkedin.com",
-    "icon": "/src/icons/socials/linkedin.svg"
+    "url": "http://www.linkedin.com"
   },
   {
     "name": "instagram",
-    "url": "http://www.instagram.com",
-    "icon": "/src/icons/socials/instagram.svg"
+    "url": "http://www.instagram.com"
   }
 ]
